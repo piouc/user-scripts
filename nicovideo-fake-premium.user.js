@@ -2,9 +2,9 @@
 // @name         nicovideo fake premium
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      2.0.0
-// @updateURL    https://raw.githubusercontent.com/piouc/user-scripts/master/nicovideo-fake-premium.user.js 
-// @downloadURL  https://raw.githubusercontent.com/piouc/user-scripts/master/nicovideo-fake-premium.user.js 
+// @version      2.0.1
+// @updateURL    https://github.com/piouc/user-scripts/raw/main/nicovideo-fake-premium.user.js 
+// @downloadURL  https://github.com/piouc/user-scripts/raw/main/nicovideo-fake-premium.user.js 
 // @include      https://www.nicovideo.jp/watch/*
 // @grant        none
 // @run-at       document-start

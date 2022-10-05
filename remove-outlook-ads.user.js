@@ -2,9 +2,9 @@
 // @name         Remove outlook ads
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      2.0.1
-// @updateURL    https://raw.githubusercontent.com/piouc/user-scripts/master/remove-outlook-ads.user.js
-// @downloadURL  https://raw.githubusercontent.com/piouc/user-scripts/master/remove-outlook-ads.user.js
+// @version      2.0.2
+// @updateURL    https://github.com/piouc/user-scripts/raw/main/remove-outlook-ads.user.js
+// @downloadURL  https://github.com/piouc/user-scripts/raw/main/remove-outlook-ads.user.js
 // @include      https://outlook.live.com/mail/*
 // @grant        none
 // ==/UserScript==

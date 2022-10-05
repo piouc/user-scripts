@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Google keyboard controls
 // @author       piouc
-// @version      2.0.1
+// @version      2.0.2
 // @description  keyboard controls for Google search
-// @updateURL    https://raw.githubusercontent.com/piouc/user-scripts/master/google-keyboard-controls.user.js
-// @downloadURL  https://raw.githubusercontent.com/piouc/user-scripts/master/google-keyboard-controls.user.js
+// @updateURL    https://github.com/piouc/user-scripts/raw/main/google-keyboard-controls.user.js
+// @downloadURL  https://github.com/piouc/user-scripts/raw/main/google-keyboard-controls.user.js
 // @include      /^https?:\/\/www\.google\.(com|co\.jp)\/search/
 // @grant        GM.openInTab
 // @run-at       document-end
