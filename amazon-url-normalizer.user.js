@@ -2,12 +2,13 @@
 // @name         Amazon URL normalizer
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      2.0.4
+// @version      2.0.5
 // @updateURL    https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @downloadURL  https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @include      https://www.amazon.co.jp/*
 // @grant        window.onurlchange
 // @run-at       document-start
+// @noframes
 // ==/UserScript==
 
 // Utility functions

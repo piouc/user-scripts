@@ -2,11 +2,12 @@
 // @name         Google tranlate shortcut
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      1.0.3
+// @version      1.0.4
 // @updateURL    https://github.com/piouc/user-scripts/raw/main/google-translate-shortcut.user.js
 // @downloadURL  https://github.com/piouc/user-scripts/raw/main/google-translate-shortcut.user.js
 // @include      /^https?:\/\/*/
 // @grant        GM_openInTab
+// @noframes
 // ==/UserScript==
 
 document.addEventListener('keydown', e => {
