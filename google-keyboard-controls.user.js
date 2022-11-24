@@ -20,7 +20,7 @@
     url => url.replace(/^https:\/\/www\.amazon\.co\.jp\/-\/en\//, 'https://www.amazon.co.jp/')
   ]
 
-  const targetSelector = '[data-sokoban-container]'
+  const targetSelector = ':is([data-sokoban-container], video-voyager)'
 
   // inselt style
   const style = document.createElement('style')
