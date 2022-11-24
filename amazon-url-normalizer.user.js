@@ -2,7 +2,7 @@
 // @name         Amazon URL normalizer
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      2.0.5
+// @version      2.0.6
 // @updateURL    https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @downloadURL  https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @include      https://www.amazon.co.jp/*
@@ -42,10 +42,10 @@ if(id !== null){
       }
     }
 
-    if(window.onurlchange){
+    if('onurlchange' in window){
       window.addEventListener('urlchange', updateUrl)
     }
-    
+
     updateUrl()
   })
 }
