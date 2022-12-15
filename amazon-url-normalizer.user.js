@@ -53,10 +53,10 @@ if(id !== null){
       }
     }
 
-    if(window.onurlchange){
+    if('onurlchange' in window){
       window.addEventListener('urlchange', updateUrl)
     }
-    
+
     updateUrl()
   })
 }
