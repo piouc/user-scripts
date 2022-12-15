@@ -26,11 +26,11 @@ const parseCookie = str => str.split(';').reduce((acc, record) => {
   const [key, value] = record.split('=')
   acc[decodeURIComponent(key.trim())] = decodeURIComponent(value.trim())
   return acc
-}, {});
+}, {})
 
 // Force language
 if(parseCookie(document.cookie)['lc-acbjp'] !== 'ja_JP'){
-  document.cookie = 'lc-acbjp=en_US;path=/;max-age=31536000'
+  document.cookie = 'lc-acbjp=ja_JP;path=/;max-age=31536000'
   location.reload()
 }
 
