@@ -2,7 +2,7 @@
 // @name         Amazon URL normalizer
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      2.0.5
+// @version      2.1.0
 // @updateURL    https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @downloadURL  https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @include      https://www.amazon.co.jp/*
@@ -13,17 +13,28 @@
 
 // Utility functions
 const getId = (url = location.href) => {
-  const regex = /^https:\/\/www.amazon.co.jp\/(?:.+\/)?(?:dp|gp\/product)\/([a-zA-Z0-9]+?)(?:[?\/].*|$)/
+  const regex = /^https:\/\/www.amazon\.co\.jp\/(?:.+\/)?(?:dp|gp\/product)\/([a-zA-Z0-9]+?)(?:[?\/].*|$)/
   return url.match(regex)?.[1] ?? null
 }
 
 const insertBefore = (el, target) => {
-  const prevElement = target
-  if(prevElement){
-    prevElement.parentNode.insertBefore(el, prevElement.nextElementSibling)
+  if(target){
+    target.parentNode.insertBefore(el, target.nextElementSibling)
   }
 }
+const parseCookie = str => str.split(';').reduce((acc, record) => {
+  const [key, value] = record.split('=')
+  acc[decodeURIComponent(key.trim())] = decodeURIComponent(value.trim())
+  return acc
+}, {});
 
+// Force language
+if(parseCookie(document.cookie)['lc-acbjp'] !== 'ja_JP'){
+  document.cookie = 'lc-acbjp=en_US;path=/;max-age=31536000'
+  location.reload()
+}
+
+// Add keepa iframe
 const id = getId()
 if(id !== null){
   // Normalize url
