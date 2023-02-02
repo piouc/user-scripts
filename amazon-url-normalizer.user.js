@@ -22,6 +22,7 @@ const insertBefore = (el, target) => {
     target.parentNode.insertBefore(el, target.nextElementSibling)
   }
 }
+
 const parseCookie = str => str.split(';').reduce((acc, record) => {
   const [key, value] = record.split('=')
   acc[decodeURIComponent(key.trim())] = decodeURIComponent(value.trim())
@@ -44,7 +45,7 @@ if(id !== null){
   document.addEventListener('DOMContentLoaded', () => {
     const iframe = document.createElement('iframe')
     iframe.style = 'width: 100%; height: 491px; border: 0 none'
-    insertBefore(iframe, document.getElementById('hover-zoom-end'))
+    insertBefore(iframe, document.getElementById('ppd'))
 
     const updateUrl = () => {
       const id = getId()
