@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google keyboard controls
 // @author       piouc
-// @version      2.0.2
+// @version      2.0.3
 // @description  keyboard controls for Google search
 // @updateURL    https://github.com/piouc/user-scripts/raw/main/google-keyboard-controls.user.js
 // @downloadURL  https://github.com/piouc/user-scripts/raw/main/google-keyboard-controls.user.js
@@ -20,7 +20,7 @@
     url => url.replace(/^https:\/\/www\.amazon\.co\.jp\/-\/en\//, 'https://www.amazon.co.jp/')
   ]
 
-  const targetSelector = ':is([data-sokoban-container], video-voyager)'
+  const targetSelector = '.g :has(> a h3)'
 
   // inselt style
   const style = document.createElement('style')
