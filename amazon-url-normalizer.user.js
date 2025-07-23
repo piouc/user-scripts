@@ -2,23 +2,25 @@
 // @name         Amazon URL normalizer
 // @author       piouc
 // @namespace    https://piou.dev
-// @version      3.0.0
+// @version      3.0.1
 // @updateURL    https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @downloadURL  https://github.com/piouc/user-scripts/raw/main/amazon-url-normalizer.user.js
 // @include      https://www.amazon.co.jp/*
+// @include      https://amazon.co.jp/*
 // @include      https://keepa.com/*
+// @connect      keepa.com
 // @grant        window.onurlchange
 // @run-at       document-start
 // ==/UserScript==
 
-if(location.hostname === 'www.amazon.co.jp'){
+if(/(www\.)?amazon\.co\.jp/.test(location.hostname)){
   // Utility functions
   const getId = (url = location.href) => {
     const regex = /^https:\/\/www.amazon\.co\.jp\/(?:.+\/)?(?:dp|gp\/product)\/([a-zA-Z0-9]+?)(?:[?\/].*|$)/
     return url.match(regex)?.[1] ?? null
   }
 
-  const insertBefore = (el, target) => {
+  const insertAfter = (el, target) => {
     if(target){
       target.parentNode.insertBefore(el, target.nextElementSibling)
     }
@@ -46,7 +48,7 @@ if(location.hostname === 'www.amazon.co.jp'){
     document.addEventListener('DOMContentLoaded', () => {
       const iframe = document.createElement('iframe')
       iframe.setAttribute('style', 'width: 100%; height: 627px; border: 0 none')
-      insertBefore(iframe, document.getElementById('ppd'))
+      insertAfter(iframe, document.querySelector('#ppd, #bottomRow'))
 
       const updateUrl = () => {
         const id = getId()
